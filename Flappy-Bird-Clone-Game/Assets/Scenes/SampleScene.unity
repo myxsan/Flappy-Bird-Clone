@@ -688,7 +688,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pipePreafab: {fileID: 4494029724992975758, guid: 7678ac09246c273469c786f64e82d0e1, type: 3}
-  height: 0.35
+  height: 0.4
   interval: 1.6
 --- !u!1 &1176155135
 GameObject:
@@ -1135,8 +1135,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.17, y: 0.12}
+  m_Offset: {x: -0.00456065, y: 0.00032577722}
+  m_Size: {x: 0.15045515, y: 0.105016276}
   m_Direction: 1
 --- !u!50 &1587561623
 Rigidbody2D:
@@ -1173,7 +1173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverCanvas: {fileID: 2122395901}
   startMenuCanvas: {fileID: 564186283}
-  _velocity: 1.8
+  _velocity: 1.6
   _rigidbody: {fileID: 1587561623}
   isPlaying: 0
   isDeath: 0
