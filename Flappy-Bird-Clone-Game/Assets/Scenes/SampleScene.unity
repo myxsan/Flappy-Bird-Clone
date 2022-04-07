@@ -560,7 +560,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &564186281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1001,8 +1001,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e416aa4350a7d9489c3d7e4287f2b20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bird: {fileID: 1587561624}
+  buttonClickSFX: {fileID: 8300000, guid: e902da84c60a7f74b801099551a8167a, type: 3}
   score: 0
   scoreText: {fileID: 1176155137}
+  isOpenSFX: 1
 --- !u!4 &1513521715
 Transform:
   m_ObjectHideFlags: 0
@@ -1171,6 +1174,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3ddfdb5f0f6ee4da39f7b2db4ff755, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitSFX: {fileID: 8300000, guid: 88d2e53b73534054684b551a886a0053, type: 3}
+  PointSFX: {fileID: 8300000, guid: 9749a57e6d63c9445b4d3384df64043f, type: 3}
+  jumpSFX: {fileID: 8300000, guid: da9caa5fac5bb6f46bd5b50e5eadef2e, type: 3}
   gameOverCanvas: {fileID: 2122395901}
   startMenuCanvas: {fileID: 564186283}
   _velocity: 1.6
@@ -1402,6 +1408,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2036789739}
   m_CullTransparentMesh: 1
+--- !u!1 &2046459452
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2046459454}
+  - component: {fileID: 2046459453}
+  m_Layer: 0
+  m_Name: Jump Boundary
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &2046459453
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046459452}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.002875924, y: -0.014379382}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.4428833, y: 0.21201277}
+  m_EdgeRadius: 0
+--- !u!4 &2046459454
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046459452}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.38, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2068467974
 GameObject:
   m_ObjectHideFlags: 0
@@ -1415,7 +1478,7 @@ GameObject:
   - component: {fileID: 2068467976}
   - component: {fileID: 2068467975}
   m_Layer: 5
-  m_Name: UI
+  m_Name: PlayUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1520,7 +1583,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2122395899
 MonoBehaviour:
   m_ObjectHideFlags: 0

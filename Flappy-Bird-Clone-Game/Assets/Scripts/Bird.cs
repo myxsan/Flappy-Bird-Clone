@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Bird : MonoBehaviour
 {
+    public AudioClip hitSFX, PointSFX, jumpSFX;
     public Canvas gameOverCanvas;
     public Canvas startMenuCanvas;
     GameManager gameManager;
@@ -31,6 +32,7 @@ public class Bird : MonoBehaviour
                 isPlaying = true;
                 _rigidbody.gravityScale = 0.75f;
             }
+            PlaySFX(jumpSFX);
             _rigidbody.velocity = Vector2.up * _velocity;
         }   
     }
@@ -39,6 +41,7 @@ public class Bird : MonoBehaviour
     {
         if(other.gameObject.name == "ScoreArea")
         {
+            PlaySFX(PointSFX);
             gameManager.IncreaseScore();
         }    
     }
@@ -46,9 +49,17 @@ public class Bird : MonoBehaviour
     {
         if(other.gameObject.tag == "DeathArea")
         {
+            PlaySFX(hitSFX);
             isDeath = true;
             Time.timeScale = 0;
             gameOverCanvas.gameObject.SetActive(true);
         }    
+    }
+    public void PlaySFX(AudioClip clip)
+    {
+        if(gameManager.isOpenSFX)
+        {
+            AudioSource.PlayClipAtPoint(clip, this.transform.position);
+        }
     }
 }
