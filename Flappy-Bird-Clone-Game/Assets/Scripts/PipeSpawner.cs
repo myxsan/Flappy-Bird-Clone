@@ -8,14 +8,20 @@ public class PipeSpawner : MonoBehaviour
     public GameObject pipePreafab;
     [SerializeField] float height;
     [SerializeField] float interval = 1.0f;
+    bool isStarted = true;
     void Awake()
     {
         bird = GameObject.Find("Bird").GetComponent<Bird>();
     }
 
-    void Start()
+
+    private void Update()
     {
-        StartCoroutine(SpawnPipe());
+        if (!bird.isDeath && bird.isPlaying && isStarted)
+        {
+            StartCoroutine(SpawnPipe());
+            isStarted = false;
+        }
     }
     public IEnumerator SpawnPipe()
     {
