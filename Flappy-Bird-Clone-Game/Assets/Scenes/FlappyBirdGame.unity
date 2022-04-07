@@ -1174,7 +1174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3ddfdb5f0f6ee4da39f7b2db4ff755, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitSFX: {fileID: 8300000, guid: 88d2e53b73534054684b551a886a0053, type: 3}
+  hitSFX: {fileID: 8300000, guid: 8c09e66c77f9cea46bdf99b7a9943c55, type: 3}
   PointSFX: {fileID: 8300000, guid: 9749a57e6d63c9445b4d3384df64043f, type: 3}
   jumpSFX: {fileID: 8300000, guid: da9caa5fac5bb6f46bd5b50e5eadef2e, type: 3}
   gameOverCanvas: {fileID: 2122395901}
